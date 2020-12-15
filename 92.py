@@ -2,7 +2,7 @@
 def time_function(function):
     from timeit import timeit
     time = timeit(function, number = 1)
-    print("This function needs {} seconds.".format(time))
+    print("The running time is {} seconds.".format(time))
 
 #adding the square of the digits in a number to form a new number
 def sum_digit(n):
