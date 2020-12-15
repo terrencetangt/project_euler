@@ -40,4 +40,4 @@ def main():
 if __name__ == "__main__":
     time_function(main)
 
-#This function needs 23.8782895 seconds.
+#The running time is 23.8782895 seconds.
