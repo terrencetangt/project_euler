@@ -1,3 +1,19 @@
+#get the process time of a function (without parameters)
+def time_function(function):
+    from timeit import timeit
+    msg = "The running time is "
+    second = timeit(function, number = 1)
+    if second < 60:
+        print(s + "{} seconds.".format(second))
+    elif second > 60:
+        minute = second // 60
+        second = second % 60
+        print(s + "{} minutes and {} seconds".format(minute, second))
+    elif second > 60 ** 2:
+        hour = second // (60 ** 2)
+        minute = (second % 60 ** 2) // 60
+        second = second % 60
+        print(s + "{} hours {} minutes and {} seconds".format(hour, minute, second))
 # return all splitting combination of a string
 def combos(n):
     s = str(n)
@@ -22,23 +38,19 @@ def number_split(square, square_root):
             return True
     return False
 
-for c in combos2(6724,2):
-    print(c)
-    print(sum(c))
+def main():
+    ans = 0
+    max = 10 ** 12
+    i = 2
+    x = i ** 2
+    while x < max:
+        x = i ** 2
+        if number_split(x, i) == True:
+            ans += x
+        i += 1
+    print(ans)
 
-import time
-tStart = time.time()
+if __name__ == "__main__":
+    time_function(main)
 
-# ans = 0
-# max = 10 ** 4
-# i = 2
-# x = i ** 2
-# while x < max:
-#     x = i ** 2
-#     if number_split(x, i) == True:
-#         ans += x
-#     i += 1
-# print(ans)
-#
-# tEnd = time.time()
-# print(tEnd - tStart)
+#The running time is 2443.1583608 seconds.
