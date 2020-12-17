@@ -1,4 +1,4 @@
-#Sieve of Eratosthenes of generating prime
+#Sieve of Eratosthenes of generating primes
 def SieveOfEratosthenes(n):
     primes = []
     primeb = [True for i in range(n + 1)]

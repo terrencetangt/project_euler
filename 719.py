@@ -14,6 +14,7 @@ def time_function(function):
         minute = (second % 60 ** 2) // 60
         second = second % 60
         print(s + "{} hours {} minutes and {} seconds".format(hour, minute, second))
+
 # return all splitting combination of a string
 def combos(n):
     s = str(n)
